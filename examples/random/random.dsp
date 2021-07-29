@@ -1,3 +1,6 @@
+declare name "Line";
+declare author "Piotr Goj";
+
 import("stdfaust.lib");
 
 bang = button("bang") : ba.impulsify;						// bang
