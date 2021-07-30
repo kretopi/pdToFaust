@@ -9,7 +9,7 @@ end = hslider("end", 500, 0, 1000, 1) : ba.sAndH(bang);
 duration = hslider("duration", 1, 0, 5, 0.01) : ba.sAndH(bang);
 
 
-process =  line(start, end, duration, bang): os.osc;
+process =  line(start, end, duration, bang): os.osc <: _, _;
 
 line(start, end, duration,gate) = L
   
