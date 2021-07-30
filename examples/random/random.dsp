@@ -1,4 +1,4 @@
-declare name "Line";
+declare name "Random";
 declare author "Piotr Goj";
 
 import("stdfaust.lib");
