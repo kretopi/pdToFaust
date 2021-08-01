@@ -5,7 +5,7 @@ import("stdfaust.lib");
 
 metroSlider = hslider("metro", 60, 30, 240, 1);	// metro slider	
 
-metro = ba.beat(metroSlider);					// [metro]
+metro = ba.beat(metroSlider);	// [metro]
 
 // attack and release use in envelope
 attack = 0.001;
