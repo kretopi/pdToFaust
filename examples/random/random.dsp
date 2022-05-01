@@ -5,8 +5,7 @@ import("stdfaust.lib");
 
 bang = button("bang") : ba.impulsify;						// bang
 
-random = (((no.noise + 1) / 2) * 30) : int + 50 : ba.sAndH(bang);		// ((no.noise + 1) / 2) * 30) generates float point numbers from 0 to 30,
-										// int convert it to integer, then add 50.
-																		
+										
+random(number, bang) = (((no.noise + 1) / 2) * number) : int : ba.sAndH(bang);	// generate number from 0 to number value after press bang button 																	
 
-process = random : ba.midikey2hz : os.osc <: _, _;				// connections between objects, <: _, _ (stereo)
+process = random(30, bang) + 50 : ba.midikey2hz : os.osc <: _, _;		// connections between objects, <: _, _ (stereo)
